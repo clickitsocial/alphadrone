@@ -9,81 +9,125 @@ Version: 1.0.0000000000
 Updated: 2018-05-06 14:39:20
 
 */
-html body{
-    margin:0;
-    padding:0;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
+    list-style-type:none;
 }
+
 /*GLOBALS*/
+
 /*----------Landing Page------------ */
 
 /* Navbar styles */
-#landing-page-nav{
-    background-color:rgb(43, 43, 43);
-    position:relative;
+
+#landing-page-nav {
+    background-color: rgb(43, 43, 43);
+    position: relative;
 }
-#landing-page-nav ul{
+
+#landing-page-nav ul {
     list-style-type: none;
-    display:none;
-    margin:0;
-    padding:0;
+    display: none;
+    margin: 0;
+    padding: 0;
 }
-.ham-bar{
+
+.ham-bar {
     cursor: pointer;
-    width:50px;
-    height:50px;
-    padding-top:3px;
-    padding-left:10px;
-}
-.fa-bars{
-    font-size:40px;
-    color:rgba(243, 243, 243, 0.952);
+    width: 50px;
+    height: 50px;
+    padding-top: 3px;
+    padding-left: 10px;
 }
 
-.navbar-logo{
-    position: absolute;
-    top:16px;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width:100px;
-    height:70px;
-    
+.fa-bars {
+    font-size: 40px;
+    color: rgba(243, 243, 243, 0.952);
 }
-.top-row{
+
+.navbar-logo {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 70px;
+}
+
+/* End Navbar Styles */
+
+/* Hero banner */
+#side-nav{
     display:none;
 }
+.top-row {
+    display: none;
+}
 
-.landing-page-wrapper{
-    width:100vw;
-    height:100vh;
+.landing-page-wrapper {
+    width: 100vw;
+    height: 100vh;
     background-image: url('/images/drone-background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.landing-page-box-container{
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-flow: row wrap;
-    justify-content: center;
+
+.landing-page-box-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
     align-items: center;
 }
-.box{
-    width:140px;
-    height:140px;
-    background:black;
-    margin:15px;
-    border-radius:50%;
-    display:flex;
+
+.box {
+    width: 140px;
+    height: 140px;
+    background: black;
+    margin: 15px;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20% 2%;
 }
-.box h4{
-    color:white;
-    font-size:1.4em;
+
+.box h4 {
+    color: white;
+    font-size: 1.4em;
 }
+
+/* End Hero banner */
+
+/* About Us Section */
+
+.main-about-us-container {
+    width: 100%;
+    text-align: center;
+}
+
+.main-about-us-container h1 {
+    padding: 4% 0 0;
+    ;
+}
+
+.about-us-line {
+    height: 2px;
+    width: 20%;
+    margin: auto;
+    background: #399CFF;
+}
+
+.main-about-us-container p {
+    padding: 0 4%;
+    font-size: 1.2em;
+    padding-bottom: 10%;
+}
+
 /*----Main page Virtual tour----*/
 
 .virtual-tour-container {
@@ -97,11 +141,10 @@ html body{
     margin: 0 auto;
 }
 
-
 .virtual-tour-box {
     margin: 0 auto;
     border: 10px solid #404040;
- }
+}
 
 .virtual-tour-box iframe {
     padding: 0;
@@ -179,7 +222,68 @@ html body{
 
 /*--Medium screen--*/
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 700px) {
+    /* ------- Hero banner ------- */
+    .landing-page-wrapper{
+        display:flex;
+    }
+    #landing-page-nav,
+    .ham-bar,
+    .navbar-logo{
+        display:none;
+    }
+    
+    .col1 {
+        display: flex;
+    }
+
+    .col2 {
+        display: flex;
+    }
+    .box{
+        border-radius: 3px;
+        min-width:180px;
+        width:20vw;
+        height: 27vh;
+        margin:0;
+        margin-left:50px;
+        margin-right:50px;
+    }
+    .no-margin{
+        margin:0;
+    }
+    .top-row{
+        position: absolute;
+        width:100vw;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        top:0;
+        left:3%;
+    }
+    .top-row .top-logo{
+        align-self: center;
+        height:72px;
+        width:123px;
+    }
+    .top-logo img{
+        width:139px;
+        height:60px;
+    }
+    #side-nav{
+        display:inline-block;
+        width:7vw;
+        background-color:grey;
+    }
+    #side-nav ul{
+        display:none;
+    }
+    .side-ham-bar{
+        padding:10px;
+    }
+    .col1{
+        padding:20px;
+    }
     .footer-nav-bar {
         flex-direction: row;
     }
@@ -196,4 +300,14 @@ html body{
 
 /*--Large screen--*/
 
-@media only screen and (min-width: 64em) {}
+@media only screen and (min-width: 1000px) {
+    #side-nav{
+        width:6vw;
+    }
+    .side-ham-bar{
+        padding:15px;
+    }
+    .fas{
+        font-size:2.5em;
+    }
+}
