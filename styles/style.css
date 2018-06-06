@@ -11,3 +11,18 @@ Updated: 2018-05-06 14:39:20
 */
 
 /*GLOBALS*/
+/*----Footer----*/
+.main-footer {
+    background-color: black;
+    padding: 2%;
+}
+
+.main-footer-line {
+    width: 90%;
+    height: 1px;
+    background: #fff
+}
+.main-footer-text{
+    color: white;
+    padding-left: 5%;
+}
