@@ -43,7 +43,7 @@ Updated: 2018-05-06 14:39:20
 }
 
 .main-footer-ul li {
-    margin-left: 5%;
+    margin-left: 10%;
     white-space: nowrap;
 }
 
@@ -56,6 +56,9 @@ Updated: 2018-05-06 14:39:20
 
 .main-footer-ul-icon li {
     margin-right: 25%;
+}
+.main-footer-ul-icon li i {
+    font-size: 2em;
 }
 
 /*--Medium screen--*/
