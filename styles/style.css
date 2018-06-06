@@ -84,6 +84,44 @@ html body{
     color:white;
     font-size:1.4em;
 }
+/*----Main page Virtual tour----*/
+
+.virtual-tour-container {
+    background-color: #399CFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.virtual-tour-box {
+    margin: 0 auto;
+    border: 10px solid #404040;
+    margin-top: 3%;
+}
+
+.virtual-tour-box iframe {
+    padding: 0;
+    margin: 0;
+    width: 80vw;
+    height: 50vh;
+    max-width: 400px;
+    max-height: 400px;
+    margin-bottom: -1%;
+}
+
+.virtual-tour-text {
+    padding: 5%;
+}
+
+.virtual-tour-text h3 {
+    font-size: 1.5em;
+}
+
+.virtual-tour-text p {
+    font-size: 1.2em;
+}
+
 /*----Footer----*/
 
 .main-footer {
@@ -93,7 +131,7 @@ html body{
 
 .main-footer-line {
     width: 90%;
-    height: 1px;
+    height: 0.5px;
     background: #fff
 }
 
@@ -105,6 +143,7 @@ html body{
 .footer-nav-bar {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .main-footer-ul {
@@ -115,7 +154,7 @@ html body{
 }
 
 .main-footer-ul li {
-    margin-left: 10%;
+    margin-left: 5%;
     white-space: nowrap;
 }
 
@@ -127,15 +166,29 @@ html body{
 }
 
 .main-footer-ul-icon li {
-    margin-right: 25%;
+    margin-right: 15%;
 }
+
 .main-footer-ul-icon li i {
     font-size: 2em;
 }
 
 /*--Medium screen--*/
 
-@media only screen and (min-width: 37.5em) {}
+@media only screen and (min-width: 37.5em) {
+    .footer-nav-bar {
+        flex-direction: row;
+    }
+    .main-footer-ul-icon li {
+        margin-right: 35%;
+    }
+    .virtual-tour-container {
+        flex-direction: row;
+    }
+    .virtual-tour-box{
+        margin-left: 5%;
+    }
+}
 
 /*--Large screen--*/
 
