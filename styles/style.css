@@ -15,18 +15,21 @@ Updated: 2018-05-06 14:39:20
 /*----Main page Virtual tour----*/
 
 .virtual-tour-container {
-    background-color: #399CFF;
-    position: relative;
+    /* background-color: #399CFF; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    background-image: url(/images/tour-background.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover, contain;
+    margin: 0 auto;
 }
+
 
 .virtual-tour-box {
     margin: 0 auto;
     border: 10px solid #404040;
-    margin-top: 3%;
-}
+ }
 
 .virtual-tour-box iframe {
     padding: 0;
@@ -35,11 +38,12 @@ Updated: 2018-05-06 14:39:20
     height: 50vh;
     max-width: 400px;
     max-height: 400px;
-    margin-bottom: -1%;
+    margin-bottom: -2%;
 }
 
 .virtual-tour-text {
     padding: 5%;
+    text-align: center;
 }
 
 .virtual-tour-text h3 {
@@ -113,7 +117,7 @@ Updated: 2018-05-06 14:39:20
     .virtual-tour-container {
         flex-direction: row;
     }
-    .virtual-tour-box{
+    .virtual-tour-box {
         margin-left: 5%;
     }
 }
