@@ -9,11 +9,12 @@ Version: 1.0.0000000000
 Updated: 2018-05-06 14:39:20
 
 */
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style-type:none;
+    list-style-type: none;
 }
 
 /*GLOBALS*/
@@ -59,15 +60,17 @@ Updated: 2018-05-06 14:39:20
 /* End Navbar Styles */
 
 /* Hero banner */
-#side-nav{
-    display:none;
+
+#side-nav {
+    display: none;
 }
+
 .top-row {
     display: none;
 }
 
 .landing-page-wrapper {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-image: url('/images/drone-background.png');
     background-size: cover;
@@ -130,20 +133,40 @@ Updated: 2018-05-06 14:39:20
 
 /*----Main page Virtual tour----*/
 
-.virtual-tour-container {
-    /* background-color: #399CFF; */
-    display: flex;
-    flex-direction: column;
-    /* background-image: url(/images/tour-background.png);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover, contain;
-    margin: 0 auto; */
+.virtual-tour-container-wrapper {
+    height: 50vh;
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: #399CFF;
+    border-top: 50vh solid white;
+    border-left: 98vw solid transparent;
+    position: relative;
+    z-index: 12;
 }
 
-.virtual-tour-box {
+/* 
+ .virtual-tour-box {
     margin: 0 auto;
     border: 10px solid #404040;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} */
+
+.random {
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+
+.overlap {
+    height: 50vh;
+    max-width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 12;
 }
 
 .virtual-tour-box iframe {
@@ -154,6 +177,8 @@ Updated: 2018-05-06 14:39:20
     max-width: 400px;
     max-height: 400px;
     margin-bottom: -2%;
+    position: absolute;
+    bottom: 0;
 }
 
 .virtual-tour-text {
@@ -171,20 +196,27 @@ Updated: 2018-05-06 14:39:20
 
 /*----Footer----*/
 
+footer {
+    overflow: hidden;
+}
+
 .main-footer {
     background-color: black;
     padding: 2%;
 }
 
 .main-footer-line {
-    width: 90%;
+    width: 98%;
     height: 0.5px;
-    background: #fff
+    background: #fff;
+    margin: 0 auto;
 }
 
 .main-footer-text {
     color: white;
     padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .footer-nav-bar {
@@ -198,22 +230,24 @@ Updated: 2018-05-06 14:39:20
     list-style-type: none;
     display: flex;
     padding-left: 5%;
+    margin-top: 5%;
 }
 
 .main-footer-ul li {
-    margin-left: 5%;
     white-space: nowrap;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 .main-footer-ul-icon {
     color: white;
     list-style-type: none;
     display: flex;
-    padding-right: 15%;
+    padding-bottom: 1%;
 }
 
 .main-footer-ul-icon li {
-    margin-right: 15%;
+    margin-left: 5%;
 }
 
 .main-footer-ul-icon li i {
@@ -224,27 +258,26 @@ Updated: 2018-05-06 14:39:20
 
 @media only screen and (min-width: 700px) {
     /* ------- Hero banner ------- */
-    .landing-page-wrapper{
-        display:flex;
+    .landing-page-wrapper {
+        display: flex;
     }
     #landing-page-nav,
     .ham-bar,
-    .navbar-logo{
-        display:none;
+    .navbar-logo {
+        display: none;
     }
-    
     .col1 {
         display: flex;
     }
-
     .col2 {
         display: flex;
     }
-    .box{
+    .box {
         border-radius: 3px;
-        min-width:180px;
-        width:20vw;
+        min-width: 180px;
+        width: 20vw;
         height: 27vh;
+<<<<<<< HEAD
         margin:0;
         margin-left:50px;
         margin-right:50px;
@@ -254,44 +287,55 @@ Updated: 2018-05-06 14:39:20
     .box h4{
         padding-right:12%;
         padding-bottom:6%;
+=======
+        margin: 0;
+        margin-left: 50px;
+        margin-right: 50px;
+>>>>>>> cc4b980695a466d1ea71e34c5680fc70cf2a2790
     }
-    .no-margin{
-        margin:0;
+    .no-margin {
+        margin: 0;
     }
-    .top-row{
+    .top-row {
         position: absolute;
-        width:97vw;
-        display:flex;
+        width: 97vw;
+        display: flex;
         justify-content: space-around;
         align-items: center;
-        top:0;
-        left:3%;
+        top: 0;
     }
-    .top-row .top-logo{
+    .top-row .top-logo {
         align-self: center;
-        height:72px;
-        width:123px;
+        height: 72px;
+        width: 123px;
     }
-    .top-logo img{
-        width:139px;
-        height:60px;
+    .top-logo img {
+        width: 139px;
+        height: 60px;
     }
-    #side-nav{
-        display:inline-block;
-        width:7vw;
-        background-color:grey;
+    #side-nav {
+        display: inline-block;
+        width: 7vw;
+        background-color: grey;
     }
-    #side-nav ul{
-        display:none;
+    #side-nav ul {
+        display: none;
     }
-    .side-ham-bar{
-        padding:10px;
+    .side-ham-bar {
+        padding: 10px;
     }
-    .col1{
-        padding:20px;
+    .col1 {
+        padding: 20px;
     }
+    /* Footer */
     .footer-nav-bar {
         flex-direction: row;
+    }
+    .main-footer-ul li {
+        margin-bottom: 5%;
+    }
+    .main-footer-ul-icon {
+        padding-right: 15%;
     }
     .main-footer-ul-icon li {
         margin-right: 35%;
@@ -307,13 +351,13 @@ Updated: 2018-05-06 14:39:20
 /*--Large screen--*/
 
 @media only screen and (min-width: 1000px) {
-    #side-nav{
-        width:6vw;
+    #side-nav {
+        width: 6vw;
     }
-    .side-ham-bar{
-        padding:15px;
+    .side-ham-bar {
+        padding: 15px;
     }
-    .fas{
-        font-size:2.5em;
+    .fas {
+        font-size: 2.5em;
     }
 }
