@@ -254,7 +254,7 @@ Updated: 2018-05-06 14:39:20
     }
     .top-row{
         position: absolute;
-        width:100vw;
+        width:97vw;
         display:flex;
         justify-content: space-around;
         align-items: center;
