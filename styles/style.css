@@ -134,11 +134,11 @@ Updated: 2018-05-06 14:39:20
     /* background-color: #399CFF; */
     display: flex;
     flex-direction: column;
-    background-image: url(/images/tour-background.png);
+    /* background-image: url(/images/tour-background.png);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover, contain;
-    margin: 0 auto;
+    margin: 0 auto; */
 }
 
 .virtual-tour-box {
