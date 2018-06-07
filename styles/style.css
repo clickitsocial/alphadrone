@@ -157,8 +157,6 @@ Updated: 2018-05-06 14:39:20
 
 .random {
     width: 100%;
-    height: 500px;
-    ;
     background-color: black;
     position: relative;
 }
@@ -170,12 +168,7 @@ Updated: 2018-05-06 14:39:20
     top: 0;
     z-index: 12;
 }
-.virtual-tour-text {
-    padding: 5%;
-    text-align: center;
-}
 
-/*
 .virtual-tour-box iframe {
     padding: 0;
     margin: 0;
@@ -187,13 +180,19 @@ Updated: 2018-05-06 14:39:20
     position: absolute;
     bottom: 0;
 }
+
+.virtual-tour-text {
+    padding: 5%;
+    text-align: center;
+}
+
 .virtual-tour-text h3 {
     font-size: 1.5em;
 }
 
 .virtual-tour-text p {
     font-size: 1.2em;
-} */
+}
 
 /*----Footer----*/
 
@@ -329,12 +328,12 @@ footer {
     .main-footer-ul-icon li {
         margin-right: 35%;
     }
-    /* .virtual-tour-container {
+    .virtual-tour-container {
         flex-direction: row;
     }
     .virtual-tour-box {
         margin-left: 5%;
-    } */
+    }
 }
 
 /*--Large screen--*/
