@@ -62,7 +62,7 @@ Updated: 2018-05-06 14:39:20
 
 /* Hero banner */
 
-#side-nav {
+.side-nav {
     display: none;
 }
 
@@ -282,7 +282,7 @@ footer {
 
 /*--Medium screen--*/
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 750px) {
     /* ------- Hero banner ------- */
     .landing-page-wrapper {
         display: flex;
@@ -322,11 +322,12 @@ footer {
     }
     .top-row {
         position: absolute;
-        width: 97vw;
+        width: 90vw;
         display: flex;
         justify-content: space-around;
         align-items: center;
         top: 0;
+        left: 9%;
     }
     .top-row .top-logo {
         align-self: center;
@@ -409,12 +410,12 @@ footer {
         left: 50%;
       }
       
-    #side-nav {
+    .side-nav {
         display: inline-block;
         width: 7vw;
-        background-color: grey;
+        background-color:rgb(43, 43, 43) ;
     }
-    #side-nav ul {
+    .side-nav ul {
         display: none;
     }
     .side-ham-bar {
@@ -478,8 +479,11 @@ footer {
 /*--Large screen--*/
 
 @media only screen and (min-width: 1000px) {
-    #side-nav {
-        width: 6vw;
+    .side-nav {
+        width: 7vw;
+    }
+    .toggle-nav{
+        width:18vw;
     }
     .side-ham-bar {
         padding: 15px;
