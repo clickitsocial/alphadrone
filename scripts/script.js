@@ -1,5 +1,7 @@
 
 var sideNavBar = document.querySelector('.side-nav');
+var navList = document.querySelector('aside ul');
+var navListLi = document.querySelector('aside ul li');
 var ham = document.querySelector('#nav-icon3');
 // Hamburger nav transition
 $(document).ready(function(){
@@ -10,6 +12,7 @@ $(document).ready(function(){
     // add width
     ham.addEventListener('click',function(){
         sideNavBar.classList.toggle('toggle-nav');
-         
+        navList.classList.toggle('side-nav-links-closed ');
+        console.log(navList);
     })
 });

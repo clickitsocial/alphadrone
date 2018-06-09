@@ -415,8 +415,12 @@ footer {
         width: 7vw;
         background-color:rgb(43, 43, 43) ;
     }
-    .side-nav ul {
+    .side-nav-links-closed{
         display: none;
+    }
+    .side-nav-links-open{
+        padding-bottom:30px;
+
     }
     .side-ham-bar {
         padding: 10px;
@@ -490,6 +494,9 @@ footer {
     }
     .fas {
         font-size: 2.5em;
+    }
+    .side-nav-links{
+        display:block;
     }
 
     /* About us section */
