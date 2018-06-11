@@ -12,7 +12,8 @@ $(document).ready(function(){
     // add width
     ham.addEventListener('click',function(){
         sideNavBar.classList.toggle('toggle-nav');
-        navList.classList.toggle('side-nav-links-closed ');
+        navList.classList.toggle('side-nav-links-closed');
+        console.log(sideNavBar);
         console.log(navList);
     })
 });
