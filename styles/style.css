@@ -399,6 +399,10 @@ footer {
         margin-right:50px;
         justify-content: flex-end;
         align-items: flex-end;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .box h4{
         padding-right:12%;
@@ -406,6 +410,24 @@ footer {
         margin: 0;
         /* margin-left: 50px;
         margin-right: 50px; */
+    }
+    .training-box{
+        background-image:url('/images/drone-training.jpg');
+    }
+    .repair-box{
+        background-image:url('/images/drone-repair.jpeg');
+    }
+    .drone-box{
+        background-image:url('/images/drone-drones.jpg');
+    }
+    .commercial-box{
+        background-image:url('/images/drone-commerical.jpg');
+    }
+    .race-box{
+        background-image:url('/images/drone-race.jpg');
+    }
+    .parts-box{
+        background-image:url('/images/drone-parts.jpg');
     }
     .no-margin {
         margin: 0;
