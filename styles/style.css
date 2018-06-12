@@ -260,7 +260,7 @@ Updated: 2018-05-06 14:39:20
 .blue-background-slant{
     position: relative;
     z-index:-1000;
-    margin-bottom:-50vh;
+    /* margin-bottom:-50vh; */
     top:-50vh;
     height:300px;
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAA1BMVEU5nP4LMfnIAAAASElEQVR4nO3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC3AcUIAAFkqh/QAAAAAElFTkSuQmCC');
