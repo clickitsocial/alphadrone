@@ -1,0 +1,502 @@
+/* Global Styles */
+
+  *{
+    box-sizing:border-box;
+  }
+  
+  :root{
+      --b: black;
+      --blue: #389ec7;
+  }
+
+  html,body,h1,h2,li{
+      margin:0;
+      padding:0;
+      font-family: 'Exo', sans-serif;
+  }
+
+/* Banner on Top of nav  */
+
+.top-nav{
+    position: absolute;
+    right:1.3em;
+    top:8px;
+    display:none;
+
+  }
+  .top-nav h4{
+      display: inline;
+      margin:0;
+      color:var(--b);
+      font-size:0.8em;
+  }
+
+/* Navigation menu */
+
+  nav{
+    background:white;
+    color:white;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:space-between;
+  }
+  
+  .logo-container{
+    padding-left:1.3em;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .statement{
+    display:none;
+  }
+
+  .logo-container img{
+    max-width: 100%;
+    width: 180px;
+    position: relative;
+    top: -0.5rem;
+  }
+  
+  nav ul li{
+      color:var(--b);
+      font-family: 'Roboto',sans-serif;
+      font-size:1.2rem;
+      position: relative;
+  }
+
+  .statement p{
+      color:var(--b);
+      font-weight: 600;
+  }
+
+  
+
+/*  Mobile nav styles*/
+
+  .mobile-nav{
+    position:absolute;
+    top:6px;
+    right:0.4em;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    background:rgba(72,72,72,0.2);
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    margin-top:0.5em;
+    margin-right:1.3em;
+    padding-top:0.1em;
+    cursor:pointer;
+  }
+  .line{
+    width:35px;
+    margin-bottom:5px;
+    height:3px;
+    background-color:var(--blue); 
+    transition:all ease-in-out 250ms;
+  }
+  
+  .line1.change{
+    transform:rotateZ(50deg) translate(8px,5px);
+  }
+  .line2.change{
+    transform: scale(0);
+  }
+  .line3.change{
+    transform: rotateZ(-50deg) translate(5px,-4px);
+  }
+
+/* Large nav styles */
+  
+  #large-nav{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    padding-left:1.3em;
+    height:0vh;
+    transition: all ease-in-out 650ms;
+  }
+  #large-nav.change{
+    height:23vh;
+    margin:0.4em;
+    margin-left:0;
+  }
+  
+  #large-nav li{
+    padding-bottom:0.4em;
+    margin-left:0;
+  }
+  
+/* Large Nav Media Query */
+
+  @media (min-width:750px){
+
+    nav{
+      flex-flow:row nowrap;
+    }
+
+    .mobile-nav{
+      display:none;
+    }
+
+    #large-nav{
+      display:block;
+      height:initial;
+      margin-top:2.3em;
+    }
+
+    .statement{
+        display:block;
+        padding-left: 30px;
+        font-size: 1.1rem;
+    }
+
+    /* banner on top of nav */
+
+    .top-nav{
+        display:block;
+    }
+
+    nav ul li{
+        display:inline-block;
+        padding:0 0.6em;
+        font-size:1.1rem;
+    }
+    nav ul li:last-of-type{
+        padding-right:1.3em;
+    }
+    
+}
+
+/* Ticker */
+.ticker-banner{
+    width:100%;
+    height:7vh;
+    position: relative;
+    background-color: var(--blue);
+}
+
+.ticker-banner li{
+  color: white;
+  font-size:1rem;
+}
+
+
+/* Main Landing Page Hero Banner */
+
+  .main-hero-video{
+    width:100vw;
+    height:80vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .main-video{
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      object-fit: cover;
+  }
+
+  .main-video-title{
+      width:80%;
+      position: relative;
+      z-index: 3000;
+      color:white;
+      top:30%;
+      left:12%;
+  }
+
+  @media only screen and (min-width:500px){
+      .main-video-title{
+          left:16%;
+      }
+  }
+
+/* Boxes Underneath Video */
+
+  .box-images{
+      position: relative;
+      top:-9em;
+  }
+
+  .inner-box-images{
+      display:flex;
+      width:90%;
+      margin:auto;
+      background-color:white;
+  }
+
+  .bottom-inner-box-images{
+    display:flex;
+    justify-content: center;
+    width:90%;
+    margin:auto;
+  }
+
+  .box{
+      margin:5px;
+      background-image: url('../images/drone-commerical.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width:calc(100%/4);
+      height:240px;
+  }
+  /* breakpoint to make background box image container take up full with
+     in medium screen sizes
+  */
+  @media only screen and (max-width:1050px){
+      .inner-box-images,
+      .bottom-inner-box-images{
+          width:100%;
+      }
+  }
+
+  /* breakpoint to make box images take up 2 spaces in medium screens 
+  */
+  @media only screen and (max-width:950px){
+      .inner-box-images,
+      .bottom-inner-box-images{
+        flex-flow:row wrap;
+      }
+      
+      .box{
+          margin:10px auto; 
+          width: calc(100%/2.1);
+      }
+  }
+
+  /* breakpoint to make box images size into single column on mobile*/
+  @media only screen and (max-width:550px){
+    .box{
+        margin: 10px;
+        width: calc(100%/1);
+  }
+}
+
+  /* Virtual Tour */
+
+.virtual-tour-container-section{
+    text-align:center;
+}
+.virtual-tour-container-section .virtual-tour-text h3{
+  font-size: 2rem;
+}
+.virtual-tour-container-section .virtual-tour-text p{
+  font-size: 1.25em;
+}
+.virtual-tour-container-section .virtual-tour-box{
+  padding-bottom:1rem;
+}
+
+
+/* Pages Hero Banner */
+
+.pages-hero-banner{
+  width:100%;
+  height:60vh;
+  background-image: url(../images/drone-drones.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pages-hero-banner h1{
+  font-size: 2.5rem;
+  color:white;
+}
+
+
+
+/* About Page Styles */
+.inner-about-us-story{
+  width:80%;
+  margin:auto;
+  text-align: center;
+}
+
+.inner-about-us-story h1{
+  font-size: 2.2rem;
+  margin:1rem;
+}
+
+.inner-about-us-story p {
+  width:100%;
+  margin: 0 auto 1rem; 
+}
+
+@media only screen and (min-width:900px){
+  .inner-about-us-story p {
+    width:80%;
+  }
+}
+
+.aboutBox{
+  display:flex;
+  flex-flow:column nowrap;
+  align-items: center;
+}
+
+.about-img{
+  margin-top:1.5rem;
+  margin-left:4%;
+  width:40%;
+  height:270px;
+  background-image: url('../images/drone-drones.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.aboutBox .about-text{
+  text-align: center;
+}
+
+.aboutBox .about-text h1{
+  font-size: 2.5rem;
+}
+
+.aboutBox .about-text p{
+  font-size:1em;
+}
+
+.about-box3{
+  margin-bottom:2rem;
+}
+
+@media only screen and (min-width:700px){
+  .aboutBox{
+    flex-flow:row nowrap;
+  }
+
+  .about-box2{
+    flex-flow:row-reverse nowrap;
+    margin-right:4%;
+  }
+
+
+  .about-img{
+    height:300px;
+  }
+
+  .about-text{
+    width:50%;
+    margin:auto;
+  }
+}
+
+/* Map Page Styles */
+
+.map-page-virtual-tour{
+  width:90%;
+  margin: auto;
+  text-align: center;
+}
+
+.map-page-virtual-tour iframe{
+  height:250px;
+  margin:auto;
+}
+
+@media only screen and (min-width:600px){
+  .map-page-virtual-tour{
+    width: 90%;
+    margin: 3.5rem auto;
+    text-align: center;
+    display: flex;
+  }
+  .map-store-info{
+    font-size: 1.15rem;
+  }
+  .map-page-virtual-tour iframe{
+    width:55%;
+  }
+
+}
+
+/* Footer */
+
+footer {
+  overflow: hidden;
+}
+
+.main-footer {
+  background-color: var(--blue);
+  padding: 2%;
+}
+
+.main-footer-line {
+  width: 98%;
+  height: 0.5px;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.main-footer-text {
+  color: white;
+  padding-left: 5%;
+  padding-top: 1%;
+}
+
+.footer-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main-footer-ul {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  padding-left: 5%;
+  margin-top: 5%;
+}
+
+.main-footer-ul li {
+  white-space: nowrap;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+.main-footer-ul-icon {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  padding-bottom: 1%;
+}
+
+.main-footer-ul-icon li {
+  margin-left: 5%;
+}
+
+.main-footer-ul-icon li i {
+  font-size: 2em;
+}
+
+@media only screen and (min-width:750px){
+      /* Footer */
+      .footer-nav-bar {
+        flex-direction: row;
+        align-items: baseline;
+    }
+    .main-footer-ul li {
+        margin-bottom: 5%;
+    }
+    .main-footer-ul-icon {
+        padding-right: 15%;
+    }
+    .main-footer-ul-icon li {
+        margin-right: 35%;
+    }
+}
